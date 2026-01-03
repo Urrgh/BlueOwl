@@ -1,0 +1,87 @@
+:root{
+  --ink:#0C2554;
+  --muted:#4a5568;
+  --accent:#7BB1E0;
+}
+
+*{ box-sizing:border-box; }
+body{
+  margin:0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background:#fff;
+  color:var(--ink);
+}
+
+.page{ min-height:100vh; }
+
+.top-spacer{ height:10vh; }
+@media (min-width: 768px){
+  .top-spacer{ height:20vh; }
+}
+
+.banner{
+  width:100%;
+  height:180px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background-image:url("./Strip.png");
+  background-size:cover;
+  background-position:center;
+}
+
+.owl{
+  width:80px;
+  height:144px;
+  object-fit:contain;
+}
+
+.content{
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 32px 24px 64px;
+  text-align:center;
+}
+
+h1{
+  margin: 0 0 24px;
+  font-size: clamp(36px, 5vw, 64px);
+  font-weight: 800;
+  letter-spacing: .5px;
+  line-height: 1.05;
+}
+
+.lead{
+  margin: 0 auto 24px;
+  color: var(--muted);
+  font-size: clamp(18px, 2.2vw, 22px);
+  line-height: 1.7;
+}
+
+.tagline{
+  margin: 0 auto 40px;
+  color: var(--accent);
+  font-size: clamp(20px, 2.4vw, 28px);
+  font-weight: 500;
+}
+
+.cta{ padding-top: 24px; }
+@media (min-width: 768px){
+  .cta{ padding-top: 48px; }
+}
+
+.btn{
+  display:inline-block;
+  padding: 12px 32px;
+  border: 1px solid #e5e7eb;
+  text-decoration:none;
+  text-transform: none;
+  letter-spacing: .5px;
+  border-radius: 2px;
+  color: rgba(12,37,84,.45);
+}
+
+.btn:hover{
+  border-color: var(--accent);
+  color: var(--ink);
+}
